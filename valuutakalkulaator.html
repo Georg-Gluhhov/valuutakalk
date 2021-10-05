@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Valuuta kalkulator</title>
+    <link rel="stylesheet" href="kalkstyle.css">
+</head>
+<body>
+<h1>Valuuta kalkulaator v1</h1>
+
+<form name="va1" onclick="return validateForm()" method="post">
+    <label for="kogus1">Sisesta kogus:></label>
+    <input type="number" name="kogus" id="kogus1">
+    <br>
+    <fieldset>
+        <legend>Vali Valuuta</legend>
+        <input type="radio" name="valuta1" id="dollar" value="dollar" onclick="radioChange(event)">
+        <label for="dollar">dollar</label>
+        <br>
+        <input type="radio" name="valuta1" id="rub" value="rub" onclick="radioChange(event)">
+        <label for="rub">rub</label>
+        <br>
+        <input type="radio" name="valuta1" id="funt" value="funt" onclick="radioChange(event)" >
+        <label for="funt">funt</label>
+        <br>
+        <input type="radio" name="valuta1" id="frank" value="frank" onclick="radioChange(event)">
+        <label for="frank">frank</label>
+        <br>
+    </fieldset>
+    <div id="vastus">Siia tuleb vastus</div>
+    <img src="img/ruble.png" alt="img" id="img1">
+
+</form>
+<script src="kalk1.js"></script>
+
+<h1>Valuuta kalkulaator v2</h1>
+<form name="va2">
+    <label for="kogus2">Sisesta kogus:></label>
+    <input type="number" name="kogus2" id="kogus2"> euro to
+    <br>
+    <select name="valuta2" onchange="selectChange(event)">
+        <option value=""></option>
+        <option value="dollar"  >dollar</option>
+        <option value="rub" >Rouble</option>
+        <option value="funt"  >Funt</option>
+        <option value="frank">Frank</option>
+    </select>
+    <div id="vastus2">Siia tuleb vastus</div>
+</form>
+
+<h1>Valuuta kalkulaator v3</h1>
+<form name = "va3">
+<label for="kogus3">Sisesta kogus:></label>
+<input type="number" name="kogus3" id="kogus3"> euro
+    <br>
+    <label for="valuutanimi">Sisesta money type:></label>
+    <input type="text" name="valuutanimi" id="valuutanimi"  placeholder="Valuuta" onsubmit="inputCurrencyText()"> euro
+    <input type="button" onclick="inputCurrencyText()" value="OK">
+
+    <div id="vastus3">Siia tuleb vastus</div>
+</form>
+
+<h1> KiloJoel kalkulaator v4</h1>
+<form name="va4" id="v4">
+    <label for="kogus4">Sisesta kogus:></label>
+    <input type="number" name="kogus4" id="kogus4">
+    <br>
+    <fieldset>
+        <legend>Vali Valuuta</legend>
+        <input type="radio" name="valuta1" id="J" value="J" onclick="radioChange2(event)">
+        <label for="J">joel</label>
+        <br>
+        <input type="radio" name="valuta1" id="mj" value="mj" onclick="radioChange2(event)">
+        <label for="mj">MegaJoel</label>
+        <br>
+        <input type="radio" name="valuta1" id="kl" value="kl" onclick="radioChange2(event)" >
+        <label for="kl">kilokaloreid</label>
+        <br>
+        <input type="radio" name="valuta1" id="k" value="k" onclick="radioChange2(event)">
+        <label for="k">kaloreid</label>
+        <br>
+    </fieldset>
+    <input type="button"  value="reset" onclick="resetForm()">
+    <div id="vastus4">Siia tuleb vastus</div>
+</form>
+</body>
+</html>
